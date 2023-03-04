@@ -13,20 +13,19 @@ def compute_height(n, parents):
     return max_height
 
 def main():
+    count = 0
+    num = 0
     txt = input()
     if txt[0]=='I':
-        txt = input()
-        print(txt)
-        
-#     count = int(input())
-#     num = input().split()
-#     num_list = list(map(int, num ))
-#     max_height = 0
-#     for i in range(count):
-#         height = compute_height(i, num_list)
-#         if height > max_height:
-#             max_height = height
-#     print(max_height)
+        count = int(input())
+        num = input().split()
+    num_list = list(map(int, num ))
+    max_height = 0
+    for i in range(count):
+        height = compute_height(i, num_list)
+        if height > max_height:
+            max_height = height
+    print(max_height)
 
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage
