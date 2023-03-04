@@ -24,7 +24,7 @@ def main():
         file = open("./test/"+path,mode ="r")
         lines = file.readlines()
         count = int(lines[0])
-        num = lines[1]
+        num = lines[1].split()
         
     num_list = list(map(int, num ))
     max_height = 0
