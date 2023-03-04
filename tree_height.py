@@ -19,6 +19,16 @@ def main():
     if txt[0]=='I':
         count = int(input())
         num = input().split()
+    if txt[0]=='F':
+        path = input()
+        file = open("./test/"+path,mode ="r")
+        lines = file.readlines()
+        print(lines)
+        count = int(lines[0])
+        print(count)
+        num = lines[1]
+        print(num)
+        
     num_list = list(map(int, num ))
     max_height = 0
     for i in range(count):
