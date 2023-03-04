@@ -3,11 +3,8 @@
 import sys
 import threading
 
-#not_height = []
-
 def compute_height(n, parents):
     max_height = 0
-    #not_height.append(n)
     if n == -1:
         return 0
     else:
@@ -32,11 +29,11 @@ def main():
     num_list = list(map(int, num ))
     max_height = 0
     for i in range(count):
-        #if i in not_height:
-            #continue
         height = compute_height(i, num_list)
         if height > max_height:
             max_height = height
+        if max_height == count:
+            break
     print(max_height)
 
 # In Python, the default limit on recursion depth is rather low,
