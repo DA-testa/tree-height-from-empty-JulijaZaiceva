@@ -23,11 +23,8 @@ def main():
         path = input()
         file = open("./test/"+path,mode ="r")
         lines = file.readlines()
-        print(lines)
         count = int(lines[0])
-        print(count)
         num = lines[1]
-        print(num)
         
     num_list = list(map(int, num ))
     max_height = 0
