@@ -2,12 +2,13 @@
 
 import sys
 import threading
+dict = {}
 
 def compute_height(n, parents):
     max_height = 0
-    if n == -1:
-        return 0
-    else:
+    if dict.get(n) != None:
+        return dict[n]
+    if n != -1:
         max_height += 1
         max_height += compute_height(parents[n], parents)
     return max_height
@@ -30,6 +31,7 @@ def main():
     max_height = 0
     for i in range(count):
         height = compute_height(i, num_list)
+        dict[i] = height
         if height > max_height:
             max_height = height
         if max_height == count:
